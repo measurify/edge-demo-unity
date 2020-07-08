@@ -7,13 +7,13 @@ using System.Threading;
 
 public class UnityMeasurify : MonoBehaviour
 {
-    public string id, pw, sampleName;
-    StringBuilder idSB, pwSB, sampleSB;
+    public string id, pw, sampleName, thing, device, deviceId;
+    StringBuilder idSB, pwSB, sampleSB, thingSB, deviceSB, deviceIdSB;
     int oldCollisionCount;
     Queue<Thread> threads;
 
     [DllImport("NATIVECPPLIBRARY", EntryPoint = "Setup")]
-    public static extern void Setup(StringBuilder myId, StringBuilder myPw);
+    public static extern void Setup(StringBuilder myId, StringBuilder myPw, StringBuilder myThing, StringBuilder myDevice, StringBuilder myDeviceId);
 
     [DllImport("NATIVECPPLIBRARY", EntryPoint = "Action")]
     public static extern void Action(StringBuilder mySample, float data);
@@ -26,7 +26,11 @@ public class UnityMeasurify : MonoBehaviour
         idSB = new StringBuilder(id);
         pwSB = new StringBuilder(pw);
         sampleSB = new StringBuilder(sampleName);
-        Setup(idSB, pwSB);
+        thingSB = new StringBuilder(thing);
+        deviceSB = new StringBuilder(device);
+        deviceIdSB = new StringBuilder(deviceId);
+
+        Setup(idSB, pwSB, thingSB, deviceSB, deviceIdSB);
         threads = new Queue<Thread>();
     }
 

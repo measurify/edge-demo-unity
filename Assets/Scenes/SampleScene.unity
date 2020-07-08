@@ -217,9 +217,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7742e76070acd4f9cf8831e53dc117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: riccardo-office-temperature-sensor-username
-  pw: riccardo-office-temperature-sensor-password
-  sampleName: temperature
+  id: pc-sensor-username
+  pw: pc-sensor-password
+  sampleName: collision
+  thing: ball
+  device: unityDevice
+  deviceId: unityDevice
 --- !u!1 &358437540
 GameObject:
   m_ObjectHideFlags: 0
