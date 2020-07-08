@@ -12,7 +12,7 @@ To test the engine we developed a simple scene where the user is in control of a
 In order to use the Edge Engine library with Unity the first thing to do is to declare the wrapper functions: 
 ```
     [DllImport("NATIVECPPLIBRARY", EntryPoint = "Setup")]
-    public static extern void Setup(StringBuilder myId, StringBuilder myPw);
+    public static extern void Setup(StringBuilder myId, StringBuilder myPw, StringBuilder myThing, StringBuilder myDevice, StringBuilder myDeviceId);
 
     [DllImport("NATIVECPPLIBRARY", EntryPoint = "Action")]
     public static extern void Action(StringBuilder mySample, float data);
