@@ -8,7 +8,7 @@ The idea is to test [Edge Engine](https://github.com/measurify/edge) so that it 
 In order to do that, the first step was to build the DLL(Dinamic Link Library) which relies on the Edge Engine library, implementing wrapper functions for the nedeed purposes and expose them so that Unity could interpret them correctly.
 In this repository we are going to focus only on the Unity side, [here](https://github.com/measurify/edge-dll) you can find the aspect related to the implementation of the DLL.
 To test the engine we developed a simple scene where the user is in control of a ball locked in a box and collisions with the walls are recorded and sent to Measurify.
-##Example 
+## Example 
 In order to use the Edge Engine library with Unity the first thing to do is to declare the wrapper functions: 
 ```
     [DllImport("NATIVECPPLIBRARY", EntryPoint = "Setup")]
