@@ -217,12 +217,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7742e76070acd4f9cf8831e53dc117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: pc-sensor-username
-  pw: pc-sensor-password
-  sampleName: collision
-  thing: ball
-  device: unityDevice
-  deviceId: unityDevice
+  id: distancing-user-username
+  pw: distancing-user-password
+  tenant: social-distancing-reminder
+  sampleName: alert
+  thing: User B
+  device: distance-monitor-1
+  deviceId: distance-monitor-1
 --- !u!1 &358437540
 GameObject:
   m_ObjectHideFlags: 0
